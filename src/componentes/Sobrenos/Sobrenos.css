@@ -3,14 +3,15 @@
   --branco-puro: #FFFFFF;
   --verde-pastel: #A8E6A1;
   --azul-claro: #A0C4D7;
-  --azul-escuro: #1C3B57; /* Adicionando um tom mais escuro para contrastes */
+  --azul-escuro: #1C3B57;
 }
 
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: var(--branco-puro);
-  color: var(--azul-escuro);
+  color: #ffffff;
+  padding: 0;
 }
 
 .conteiner-geral {
@@ -31,6 +32,7 @@ body {
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 .sobremim {
@@ -58,6 +60,22 @@ body {
   justify-content: flex-end;
   align-items: center;
   margin-right: 20px;
+}
+
+/* Efeito de transição e desfoque */
+.hidden {
+  opacity: 0;
+  filter: blur(20px);
+  transform: translateX(-100%);
+  transition: all 1s;
+  color: var(--azul-escuro);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  color: var(--azul-escuro);
 }
 
 /* Media Queries para responsividade */
@@ -105,4 +123,8 @@ body {
   .DivText {
     font-size: 1rem;
   }
+}
+
+.espaco{
+  max-height: 100vh;
 }
