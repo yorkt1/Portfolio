@@ -1,22 +1,55 @@
-import './habilidades.css'
-
+import React, { useEffect } from 'react';
+import './habilidades.css';
 
 function Habilidades() {
-    return (
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('showIcon'); // Adiciona a classe 'show' quando visível
+        } else {
+          entry.target.classList.remove('showIcon'); // Remove a classe 'show' quando não visível
+        }
+      });
+    });
 
+    const hiddenElements = document.querySelectorAll('.hiddenIcon');
+    hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
 
-        <div className="conteiner">
-<div className="icon">
-    
-            <i className="fa-brands fa-js"><h3>JavaScript</h3></i>
-            <i className="fa-brands fa-react"><h3>React</h3></i>
-            <i className="fa-brands fa-css3-alt"><h3>Css</h3></i>
-            <i className="fa-brands fa-html5"><h3>Html</h3></i>
-            <i className="fa-brands fa-git-alt"><h3>GitHub</h3></i>
-            <i className="fa-brands fa-java"><h3>Java</h3></i>
-</div>
+  return (
+    <div className="conteiner">
+      <div className="habilidade hiddenIcon">
+        <h1>Minhas <strong>Habilidades</strong></h1>
+      </div>
+      <div className="icon">
+        <div className="icon-item hiddenIcon">
+          <i className="fa-brands fa-js"></i>
+          <h3>JavaScript</h3>
         </div>
-    )
+        <div className="icon-item hiddenIcon">
+          <i className="fa-brands fa-react"></i>
+          <h3>React</h3>
+        </div>
+        <div className="icon-item hiddenIcon">
+          <i className="fa-brands fa-css3-alt"></i>
+          <h3>CSS</h3>
+        </div>
+        <div className="icon-item hiddenIcon">
+          <i className="fa-brands fa-html5"></i>
+          <h3>HTML</h3>
+        </div>
+        <div className="icon-item hiddenIcon">
+          <i className="fa-brands fa-git-alt"></i>
+          <h3>GitHub</h3>
+        </div>
+        <div className="icon-item hiddenIcon">
+          <i className="fa-brands fa-java"></i>
+          <h3>Java</h3>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Habilidades;
