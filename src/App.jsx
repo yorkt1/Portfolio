@@ -12,7 +12,7 @@ function App() {
     <>
       <Navbar />
       <Habilidades />
-    {/* <Sobrenos /> */}
+      <Sobrenos />
     </>
   )
 }
