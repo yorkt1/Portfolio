@@ -57,7 +57,8 @@ body {
 .imgProfilePerfil {
   width: 50%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+
   align-items: center;
   margin-right: 20px;
 }
@@ -95,14 +96,17 @@ body {
   .sobremim {
     width: 90%;
     text-align: center;
+    overflow: hidden; /
   }
 
   .sobremim h1 {
     font-size: 2rem;
+    margin-top: 15px;
   }
 
   .DivText {
     font-size: 1.1rem;
+    margin-top: 15px;
   }
 }
 

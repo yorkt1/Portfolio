@@ -1,10 +1,25 @@
+:root {
+    --dourado: #F0C14B;
+    --branco-puro: #FFFFFF;
+    --verde-pastel: #A8E6A1;
+    --azul-claro: #A0C4D7;
+    --azul-escuro: #1C3B57;
+    --azul-roupa:  rgb(54, 53, 113);
+    --azul-mao:#28f1f4;
+  }
+  
+
+
 nav {
+
+
+
     display: flex;
     align-items: center;
-    background-color: red;
+    background-color: var(--azul-claro);
     justify-content: space-between;
     padding: 20px 80px;
-    box-shadow: 0 5px rgb(0, 0, 0, 0.6);
+    box-shadow: 0 5px var(--azul-escuro);
 }
 
 #navbar {
