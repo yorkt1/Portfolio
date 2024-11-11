@@ -19,6 +19,7 @@ nav {
     background-color: var(--azul-claro);
     justify-content: space-between;
     padding: 20px 80px;
+    height: 10vh;
     box-shadow: 0 5px var(--azul-escuro);
 }
 

@@ -132,3 +132,5 @@ body {
 .espaco{
   max-height: 100vh;
 }
+
+@midia{max-width: 480px}
