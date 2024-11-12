@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './habilidades.css';
+import './Habilidades.css';
 
 function Habilidades() {
   useEffect(() => {

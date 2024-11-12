@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "axios": "^1.7.7",
     "portfolio": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -25,6 +27,7 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.12",
     "globals": "^15.9.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "vite": "^5.4.8"
   }
 }

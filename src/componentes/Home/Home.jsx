@@ -11,7 +11,7 @@ const Home = () => {
           <span>Guilherme Oliveira</span>
           <span>
             Desenvolvedor de sistemas
-            <a target="_blank" href="salfia.com">Web Developer</a>
+            <a target="_blank" href="#">Web Developer</a>
           </span>
         </div>
       </section>

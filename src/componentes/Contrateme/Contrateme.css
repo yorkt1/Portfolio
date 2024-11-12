@@ -1,0 +1,67 @@
+/* Estilização do contêiner principal */
+.contratameprincipal {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilização do formulário */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Estilização dos rótulos (labels) */
+  label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Estilização dos campos de entrada de texto */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Estilização do campo de mensagem (textarea) */
+  textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  /* Estilização do botão de envio */
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efeito ao passar o mouse sobre o botão de envio */
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilização de foco nos campos de entrada */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
