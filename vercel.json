@@ -2,18 +2,18 @@
     "version": 2,
     "builds": [
       {
-        "src": "src/App.jsx",
-        "use": "@vercel/node"
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "build"
+        }
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/src/App.jsx"
+        "dest": "/$1"
       }
     ]
-
-
-    
   }
   
