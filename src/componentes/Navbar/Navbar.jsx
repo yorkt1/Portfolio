@@ -29,21 +29,21 @@ class Navbar extends Component {
                     className={this.state.clicked ? "#navbar active" : "#navbar"}
                 >
                     <li className="active">
-                        <a className="a" href="index.html">
+                        <a className="efeito" href="index.html">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="index.html">Sobre</a>
+                        <a className="efeito" href="index.html">Sobre</a>
                     </li>
                     <li>
-                        <a href="index.html">Habilidades</a>
+                        <a className="efeito" href="index.html">Habilidades</a>
                     </li>
                     <li>
-                        <a href="index.html">Projeto</a>
+                        <a className="efeito" href="index.html">Projeto</a>
                     </li>
                     <li>
-                        <a href="index.html">Me contrate </a>
+                        <a className="efeito" href="index.html">Me contrate </a>
                     </li>
                 </ul>
             </div>

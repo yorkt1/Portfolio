@@ -1,3 +1,16 @@
+:root {
+  --dourado: #F0C14B;
+  --branco-puro: #FFFFFF;
+  --verde-pastel: #A8E6A1;
+  --azul-claro: #A0C4D7;
+  --azul-escuro: #1C3B57;
+  --cinza-escuro: #1b1b1b;
+  --azul-roupa:  rgb(54, 53, 113);
+  --azul-mao:#28f1f4;
+}
+
+
+
 * {
   box-sizing: border-box;
 }
