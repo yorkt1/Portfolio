@@ -1,135 +1,186 @@
-/* src/styles/GridContainer.css */
 .grid--container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
+    gap: 20px;
+    padding: 20px;
   }
   
+  /* Célula do grid */
   .grid--cell {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .grid--item {
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
   }
   
-  .grid--item:hover {
-    transform: scale(1.05);
+  .grid--cell:hover {
+    transform: translateY(-10px);
   }
   
+  /* Preview Container (Imagem do card) */
   .preview--container {
     position: relative;
+    overflow: hidden;
+    height: 200px;
   }
   
   .preview-image--container {
     display: block;
     width: 100%;
-    height: 200px;
-    background-color: #f5f5f5;
+    height: 100%;
+    background-color: #ddd;
   }
   
   .preview-image {
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0; /* Placeholder for image */
+    background-image: url('https://s2-techtudo.glbimg.com/b5YztaIHpXYbpVYJsK0ySxOKW_w=/0x0:1344x768/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2024/A/h/ZskOJZQ9amSC55FcJROA/dream-studio-ai.png'); /* Imagem de exemplo */
     background-size: cover;
     background-position: center;
-    height: 100%;
+    transition: opacity 0.3s ease;
   }
   
+  /* Meta Container */
   .meta--container {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  
-  .issue, .page {
-    font-size: 0.875rem;
+    padding: 10px;
+    font-size: 14px;
     color: #777;
   }
   
-  .content--container {
-    padding: 1rem;
+  .meta--container a {
+    color: #777;
+    text-decoration: none;
+    margin-right: 15px;
   }
   
-  .title--container .title--text {
-    font-size: 1.25rem;
+  .meta--container a:hover {
+    color: #333;
+  }
+  
+  /* Content Container */
+  .content--container {
+    padding: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 230px;
+  }
+  
+  /* Título */
+  .title--container {
+    margin-bottom: 15px;
+  }
+  
+  .title--text {
+    font-size: 18px;
+    font-weight: bold;
     color: #333;
     text-decoration: none;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.75rem;
   }
   
+  .title--text:hover {
+    color: #0073e6;
+  }
+  
+  /* Tags */
   .tags--overflow-container {
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
+    overflow: hidden;
   }
   
   .tags--container {
-    list-style: none;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 5px;
   }
   
   .tag {
-    background-color: #e0e0e0;
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
+    font-size: 12px;
+    color: #0073e6;
+    background-color: #e7f3ff;
+    padding: 5px;
+    border-radius: 3px;
     text-decoration: none;
-    font-size: 0.875rem;
-    color: #555;
+    transition: background-color 0.3s;
   }
   
   .tag:hover {
-    background-color: #bbb;
+    background-color: #cce0ff;
   }
   
   .ellipsis {
-    font-size: 1.25rem;
-    color: #777;
+    font-size: 14px;
+    cursor: pointer;
   }
   
+  /* Hover Options */
   .hover--options {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    align-items: center;
   }
   
   .button {
     display: inline-flex;
     align-items: center;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: #fff;
+    font-size: 14px;
+    color: #333;
     text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.875rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
   }
   
   .button:hover {
-    background-color: #0056b3;
+    background-color: #f2f2f2;
   }
   
   .icon-title {
-    display: flex;
-    align-items: center;
+    margin-right: 5px;
+  }
+  
+  /* Botões */
+  .Repositório {
+    background-color: #f0f8ff;
+  }
+  
+  .Deploy
+   {
+    background-color: #e0f7fa;
+  }
+  
+  .follow {
+    background-color: #f1f1f1;
+    border: 2px solid #ddd;
+    color: #333;
+    padding: 8px 8px;
+  }
+  
+  .follow:hover {
+    background-color: #e0e0e0;
   }
   
   .new-tab {
-    margin-left: 0.5rem;
+    margin-left: 5px;
   }
   
-  .follow.button {
-    background-color: #28a745;
+  button i {
+    margin-left: 5px;
   }
   
-  .follow.button:hover {
-    background-color: #218838;
+  /* Responsividade */
+  @media screen and (max-width: 768px) {
+    .grid--container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .grid--container {
+      grid-template-columns: 1fr;
+    }
   }
   
