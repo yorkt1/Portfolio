@@ -45,7 +45,7 @@ return(
           <li><a href="#" className="tag">Morbi Leo</a></li>
           <li><a href="#" className="tag">Eris Culpa</a></li>
           <li><a href="#" className="tag">Facere</a></li>
-          <li><a href="#" className="tag">Quisus</a></li>
+          <li><a href="#" className="tag">auisus</a></li>
           <li><a href="#" className="tag ellipsis"><i className="far fa-ellipsis-h"></i></a></li>
         </ul>
       </div>
