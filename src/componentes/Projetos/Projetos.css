@@ -55,6 +55,17 @@
     background-position: center;
     transition: opacity 0.3s ease;
   }
+  .preview-imageProjetoUm{
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0; /* Placeholder for image */
+    background-image: url('../Projetos/Projeto-Farmacia.png'); /* Imagem de exemplo */
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+  }
+
+  
   
   /* Meta Container */
   .meta--container {
