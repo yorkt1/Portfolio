@@ -195,6 +195,55 @@
   button i {
     margin-left: 5px;
   }
+
+/* Container das tags */
+.tags--container {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  overflow: hidden; /* Esconde qualquer elemento fora da área visível */
+}
+
+/* Tag individual */
+.tag {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  opacity: 0; /* Começa invisível */
+  transform: translateX(100%); /* Começa fora da tela (à direita) */
+  animation: slideIn 1s forwards; /* Aplica a animação */
+}
+
+/* Definindo a animação de slide */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); /* Começa fora da tela */
+  }
+  50% {
+    opacity: 0.5; /* Meio da animação */
+    transform: translateX(30%); /* Aumento do deslocamento */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Termina no lugar original */
+  }
+}
+
+/* Para dar um efeito suave no início das animações */
+.tags--container li:nth-child(1) .tag {
+  animation-delay: 0s; /* Primeira tag aparece sem atraso */
+}
+.tags--container li:nth-child(2) .tag {
+  animation-delay: 0.2s; /* Segunda tag aparece com um pequeno atraso */
+}
+.tags--container li:nth-child(3) .tag {
+  animation-delay: 0.4s; /* Terceira tag aparece com um atraso maior */
+}
+
   
   /* Responsividade */
   @media screen and (max-width: 768px) {

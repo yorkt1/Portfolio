@@ -83,10 +83,11 @@ return(
       </div>
       
       <div className="tags--overflow-container">
-        <ul className="tags--container">
-          <li><a href="#" className="tag">Volutpat</a></li>
-        
-        </ul>
+      <ul className="tags--container">
+      <li><a href="#" className="tag">React</a></li>
+      <li><a href="#" className="tag">HTML</a></li>
+      <li><a href="#" className="tag">CSS</a></li>
+    </ul>
       </div>
       
       <div className="hover--options">
