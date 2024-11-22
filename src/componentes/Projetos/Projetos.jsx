@@ -19,7 +19,11 @@ function Projetos(){
     
 
 return(
-
+<div className="geralProjetos hiddenCards">
+  <div className="tituProjetos">
+    
+<h1>Meus <strong>Projetos</strong></h1>
+  </div>
 <div className="grid--container hiddenCards">
 
 
@@ -243,6 +247,7 @@ return(
 
 </div>
 
+           </div>
 )
 
 }

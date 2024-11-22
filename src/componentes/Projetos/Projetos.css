@@ -245,11 +245,25 @@
 }
 
 .paginas-slide span {
-  padding: 0 20px;
-  font-size: 2rem;
-  display: inline-block;
-}
+  border: .05rem solid 
+  color-mix(in oklab, currentColor, transparent 80%);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      user-select: none;
+      padding-inline: 14px;
+      padding-bottom: 1px;
+      height: 32px;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-left: 5px;
+        }
 
+.tituProjetos{
+ 
+  display: flex;
+justify-content: center;
+}
 /* Definindo a animação */
 @keyframes anime {
   0% {
