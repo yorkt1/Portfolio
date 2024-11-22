@@ -39,11 +39,21 @@ return(
       </div>
       
       <div className="tags--overflow-container" >
-        <ul className="tags--container">
-          <li><a href="https://farmacia-atividade.vercel.app/#" className="tag">Delect a Distinctio</a></li>
-       
-          <li><a href="https://farmacia-atividade.vercel.app/#" className="tag ellipsis"><i className="far fa-ellipsis-h"></i></a></li>
-        </ul>
+      <div className="conteiner-slide">
+                <div className="paginas-slide">
+          
+                  <span>React</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>PEROCA</span>
+                  <span>SHOTA</span>
+                  <span>React</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>PEROCA</span>
+                  <span>SHOTA</span>
+                </div>
+              </div>
       </div>
       
       <div className="hover--options">
@@ -83,11 +93,21 @@ return(
       </div>
       
       <div className="tags--overflow-container">
-      <ul className="tags--container">
-      <li><a href="#" className="tag">React</a></li>
-      <li><a href="#" className="tag">HTML</a></li>
-      <li><a href="#" className="tag">CSS</a></li>
-    </ul>
+      <div className="conteiner-slide">
+                <div className="paginas-slide">
+          
+                  <span>React</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>PEROCA</span>
+                  <span>SHOTA</span>
+                  <span>React</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>PEROCA</span>
+                  <span>SHOTA</span>
+                </div>
+              </div>
       </div>
       
       <div className="hover--options">
@@ -128,10 +148,21 @@ return(
       </div>
       
       <div className="tags--overflow-container">
-        <ul className="tags--container">
-          <li><a href="#" className="tag">Gravidas</a></li>
-         
-        </ul>
+      <div className="conteiner-slide">
+                <div className="paginas-slide">
+          
+                  <span>React</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>PEROCA</span>
+                  <span>SHOTA</span>
+                  <span>React</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>PEROCA</span>
+                  <span>SHOTA</span>
+                </div>
+              </div>
       </div>
       
       <div className="hover--options">
@@ -172,9 +203,21 @@ return(
       </div>
       
       <div className="tags--overflow-container">
-        <ul className="tags--container">
-          <li><a href="#" className="tag">Elementum</a></li>
-        </ul>
+      <div className="conteiner-slide">
+                <div className="paginas-slide">
+          
+                  <span>React</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>PEROCA</span>
+                  <span>SHOTA</span>
+                  <span>React</span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>PEROCA</span>
+                  <span>SHOTA</span>
+                </div>
+              </div>
       </div>
       
       <div className="hover--options">

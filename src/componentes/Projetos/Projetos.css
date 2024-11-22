@@ -21,11 +21,12 @@
   
   /* Célula do grid */
   .grid--cell {
-    background-color: #fff;
+    background-color: #e7e3db;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
+    
   }
   
   .grid--cell:hover {
@@ -44,29 +45,46 @@
     width: 100%;
     height: 100%;
     background-color: #ddd;
+
+    background-size: cover; /* Faz com que a imagem preencha todo o container */
+    background-position: center; /* Garante que a imagem seja centralizada */
+    transform: scale(1.05);
   }
   
-  .preview-image {
+  .preview-imageProjetoUm {
     width: 100%;
     height: 100%;
-    background-color: #e0e0e0; /* Placeholder for image */
-    background-image: url('https://s2-techtudo.glbimg.com/b5YztaIHpXYbpVYJsK0ySxOKW_w=/0x0:1344x768/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2024/A/h/ZskOJZQ9amSC55FcJROA/dream-studio-ai.png'); /* Imagem de exemplo */
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.3s ease;
-  }
-  .preview-imageProjetoUm{
-    width: 100%;
-    height: 100%;
-    background-color: #e0e0e0; /* Placeholder for image */
+    background-color: #e7e3db; /* Cor inicial da imagem */
     background-image: url('../Projetos/Projeto-Farmacia.png'); /* Imagem de exemplo */
     background-size: cover;
     background-position: center;
+    transition: transform 0.5s ease, background-color 0.5s ease, filter 0.5s ease;
+    position: relative;
+    transform: scale(1.05);
+  }
+  
+  /* Efeito de hover */
+  .preview-imageProjetoUm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e7e3db; /* Cor de sobreposição */
+    mix-blend-mode: color; /* Aplica a cor sobre a imagem */
+    opacity: 1;
     transition: opacity 0.3s ease;
   }
-
   
+  /* No hover, remove a cor de sobreposição */
+  .preview-imageProjetoUm:hover::before {
+    opacity: 0; /* Remove a sobreposição de cor */
+  }
   
+  .preview-imageProjetoUm:hover {
+    transform: scale(1.00);
+  }
   /* Meta Container */
   .meta--container {
     padding: 10px;
@@ -107,34 +125,11 @@
   }
   
   .title--text:hover {
-    color: #0073e6;
+    color: hsl(0, 1%, 36%);
   }
   
-  /* Tags */
-  .tags--overflow-container {
-    margin-bottom: 15px;
-    overflow: hidden;
-  }
-  
-  .tags--container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-  
-  .tag {
-    font-size: 12px;
-    color: #0073e6;
-    background-color: #e7f3ff;
-    padding: 5px;
-    border-radius: 3px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .tag:hover {
-    background-color: #cce0ff;
-  }
+ 
+ 
   
   .ellipsis {
     font-size: 14px;
@@ -165,17 +160,21 @@
   
   .icon-title {
     margin-right: 5px;
+    
+
   }
   
   /* Botões */
   .Repositório {
-    background-color: #f0f8ff;
+    background-color: #f0f0f0;
+    box-shadow: inset;
   }
   
   .Deploy
    {
-    background-color: #e0f7fa;
-  }
+    background-color: #f0f0f0;
+    box-shadow: inset;
+    }
   
   .follow {
     background-color: #f1f1f1;
@@ -212,39 +211,58 @@
   color: #333;
   text-decoration: none;
   border-radius: 4px;
-  opacity: 0; /* Começa invisível */
-  transform: translateX(100%); /* Começa fora da tela (à direita) */
-  animation: slideIn 1s forwards; /* Aplica a animação */
+
+
 }
 
-/* Definindo a animação de slide */
-@keyframes slideIn {
+
+.tag:hover {
+  background-color: hsl(0, 1%, 36%);
+}
+ /* Tags */
+ .tags--overflow-container {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.tags--container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Container do carrossel */
+.conteiner-slide {
+  width: 75vw; /* Largura do container */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Estilo da faixa de slides que irá se mover */
+.paginas-slide {
+  display: inline-block;
+  animation: anime 15s linear infinite;
+}
+
+.paginas-slide span {
+  padding: 0 20px;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+/* Definindo a animação */
+@keyframes anime {
   0% {
-    opacity: 0;
-    transform: translateX(100%); /* Começa fora da tela */
-  }
-  50% {
-    opacity: 0.5; /* Meio da animação */
-    transform: translateX(30%); /* Aumento do deslocamento */
+    transform: translateX(0); /* Começa na posição inicial */
   }
   100% {
-    opacity: 1;
-    transform: translateX(0); /* Termina no lugar original */
+    transform: translateX(-50%); /* Move o conteúdo até a metade do seu tamanho */
   }
 }
 
-/* Para dar um efeito suave no início das animações */
-.tags--container li:nth-child(1) .tag {
-  animation-delay: 0s; /* Primeira tag aparece sem atraso */
-}
-.tags--container li:nth-child(2) .tag {
-  animation-delay: 0.2s; /* Segunda tag aparece com um pequeno atraso */
-}
-.tags--container li:nth-child(3) .tag {
-  animation-delay: 0.4s; /* Terceira tag aparece com um atraso maior */
-}
 
-  
+
+
   /* Responsividade */
   @media screen and (max-width: 768px) {
     .grid--container {
