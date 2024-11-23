@@ -21,7 +21,7 @@ class Navbar extends Component {
                     <span className="oliveira"> Oliveira</span>
                 </a>
             </div>
-            <a href="index.html">Guilherme</a>
+            
 
             <div>
                 <ul
