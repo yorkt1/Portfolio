@@ -21,7 +21,7 @@ function Sobrenos() {
   }, []);
 
   return (
-    <div className="conteiner-geral">
+    <div id='sobre' className="conteiner-geral">
       <div className="imgProfilePerfil">
         <img className="Imgprofile hidden" src={imgprofile} alt="Profile" />
       </div>

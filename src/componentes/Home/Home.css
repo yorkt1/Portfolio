@@ -33,7 +33,7 @@ body {
  
 section {
   background-color: #1b1b1b;
-  height: 100vh;
+  min-height: 90vh;
   display: flex;
 }
 
@@ -117,9 +117,11 @@ section .title span a::after {
 .social-icons {
   display: flex;
   position: absolute;
-  top: 98%;
-  left: 30%;
-
+  top: 86%;
+  left: -5%;
+ 
+  justify-content: center;
+width: 100%;
   transform: translate(-50%, -50%);
 }
 

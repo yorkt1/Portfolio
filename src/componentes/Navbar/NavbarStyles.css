@@ -158,41 +158,83 @@ nav li:nth-child(1) {
   }
   
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 915px) {
 
 
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: absolute; /* Posicionamento absoluto fora da tela */
+    top: 56px;
+    right: -370px; /* Inicialmente fora da tela */
+    width: 200px;
+    height: 28vh;
+    background-color: #f9f6ef;
+    padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
+    z-index: 2; /* Z-index para garantir que o menu apareça por cima do conteúdo */
+    border-radius: 0px 0px 0px 20px;
+}
+
+/* Quando o menu está ativo, ele se move para dentro da tela */
+#navbar.active {
+    right: 0;
+    transition: 0.3s ease-in-out;
+}
+
+/* Para o conteúdo da página não ser empurrado quando o menu não está visível, use flexbox */
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Evita overflow horizontal */
+}
+
+/* Estilo do ícone do menu (apenas visível em telas pequenas) */
+#mobile {
+    display: none;
+}
+
+#mobile i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsividade para telas pequenas */
+@media screen and (max-width: 915px) {
+    /* Exibe o botão de menu em telas menores */
+    #mobile {
+        display: block;
+    }
+
+    /* Exibe o menu de navegação em uma coluna */
     #navbar {
-        display: flex;
-        gap: 5px;
         flex-direction: column;
-        justify-content: flex-start;
         align-items: flex-start;
         position: absolute;
-        top: 113px;
-        right: -350px;
+        top: 56px;
+        right: -370px;
         width: 200px;
-        height: 18vh;
+        height: 270px;
         background-color: #f9f6ef;
         padding: 40px 0 0 10px;
         transition: 0.3s ease-in-out;
         z-index: 3;
         border-radius: 0px 0px 0px 20px;
+        overflow-x: hidden;
     }
 
+    /* Classe ativa */
     #navbar.active {
         right: 0;
+        top: none;
+        transition: 0.3s ease-in-out;
     }
 
-    #navbar {
-        margin-bottom: 25px;
+    /* Ajuste para que o menu não empurre o conteúdo */
+    body {
+        overflow-x: hidden;
     }
-
-    #mobile {
-        display: block;
-    }
-
-    #mobile i {
-        font-size: 24px;
-        cursor: pointer;
-    }
+}
 }

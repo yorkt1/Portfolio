@@ -19,7 +19,7 @@ function Habilidades() {
 
   return (
     <div className="conteiner">
-      <div className="habilidade hiddenIcon">
+      <div  id="habilidades" className="habilidade hiddenIcon">
         <h1>Minhas <strong>Habilidades</strong></h1>
       </div>
       <div className="icon">

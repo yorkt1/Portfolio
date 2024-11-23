@@ -19,7 +19,7 @@
   align-items: center;
   gap: 20px; 
   flex-wrap: wrap;
-  padding: 20px;
+  padding-top: 30px;
 
 }
 
@@ -108,4 +108,27 @@ h1{
   filter: blur(0);
   transform: scale(1);
   color: var(--azul-escuro);
+}
+
+@media screen and (max-width: 700px) {
+
+
+  .icon-item i {
+    font-size: 100px; 
+  }
+
+
+  .icon-item {
+    width: calc(50% - 10px); 
+  }
+
+  
+  .icon {
+    gap: 10px; 
+  }
+  
+  
+  .conteiner {
+    padding: 10px; 
+  }
 }

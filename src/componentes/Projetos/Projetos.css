@@ -11,12 +11,13 @@
   }
   
 
-
-.grid--container {
+  .grid--container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    max-height: 80vh; /* Defina uma altura máxima, por exemplo, 80% da altura da tela */
+    overflow-y: auto; /* Ativa a rolagem vertical se o conteúdo exceder a altura máxima */
   }
   
   /* Célula do grid */
@@ -428,3 +429,7 @@ justify-content: center;
     transform: scale(1) translateY(0); 
     color: var(--azul-escuro);
   }
+.geralProjetos {
+  height: 100vh;
+  padding-top: 50px;
+}

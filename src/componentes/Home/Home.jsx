@@ -20,8 +20,8 @@ const Home = () => {
 
   return (
     <div>
-      <section>
-        <div className="title">
+      <section id='home'>
+        <div className="title  ">
           <span>Guilherme Oliveira</span>
           <span>
             Desenvolvedor de sistemas

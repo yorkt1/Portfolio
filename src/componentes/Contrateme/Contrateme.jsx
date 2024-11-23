@@ -37,7 +37,7 @@ const Contrateme = () => {
   };
 
   return (
-    <div className="contratameprincipal">
+    <div id='contato' className="contratameprincipal">
       <div className="sessao">
         <h2>Contato</h2>
         <form onSubmit={handleSubmit}>

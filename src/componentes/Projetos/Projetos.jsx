@@ -36,7 +36,7 @@ function Projetos() {
   };
 
   return (
-    <div className="geralProjetos hiddenCards">
+    <div className="geralProjetos hiddenCards projetos">
       <div className="tituProjetos">
 
         <h1>Meus <strong>Projetos</strong></h1>
