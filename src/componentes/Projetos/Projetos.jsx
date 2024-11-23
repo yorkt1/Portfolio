@@ -6,7 +6,15 @@ function Projetos() {
 
   const [popupVisible, setPopupVisible] = useState(false);
 
-  
+  const [popupDescription, setPopupDescription] = useState('');
+
+  const descricoes = {
+    1: 'Este projeto consiste no desenvolvimento de uma landing page simples e funcional para uma farmácia, utilizando React. O objetivo é criar uma página leve, rápida e fácil de navegar, com foco em promover produtos e facilitar o contato com os clientes.',
+    2: 'A Flower Experience é um projeto desenvolvido em Spring Boot, com o objetivo de oferecer um catálogo online de plantas. A aplicação permite aos usuários explorar uma ampla variedade de plantas, com informações detalhadas sobre cada uma, como cuidados, tipos e características específicas.',
+    3: 'Walphe é uma plataforma desenvolvida para exibir e gerenciar catálogos de produtos online. O objetivo é fornecer uma solução simples e eficiente para empresas e consumidores visualizarem, pesquisarem e explorarem uma variedade de produtos, com foco na experiência do usuário e fácil navegação.',
+    4: 'O primeiro protótipo do Flower Experience foi desenvolvido utilizando HTML e CSS para a estrutura e design visual, com funcionalidades de CRUD (Criar, Ler, Atualizar, Deletar) implementadas de forma simples. O protótipo permite aos usuários visualizar e interagir com um catálogo básico de plantas',
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -22,8 +30,9 @@ function Projetos() {
     hiddenElements.forEach((el) => observer.observe(el));
   }, []);
 
-  const togglePopup = () => {
-    setPopupVisible(!popupVisible);  // Alterna a visibilidade do popup
+  const togglePopup = (id) => {
+    setPopupDescription(descricoes[id]); // Atribui a descrição do projeto ao estado
+    setPopupVisible(!popupVisible); // Alterna a visibilidade do popup
   };
 
   return (
@@ -81,7 +90,7 @@ function Projetos() {
                   <span className="new-tab"><i className="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <button className="follow button" onClick={togglePopup}>
+                <button className="follow button" onClick={() => togglePopup(1)}>
                   <i className="fa-solid fa-circle-info"></i>
                 </button>
 
@@ -92,19 +101,19 @@ function Projetos() {
         </div>
   {/* Popup - Modal */}
   {popupVisible && (
-          <div className="popup-overlay">
-            <div className="popup">
-              <h2>Informações do Projeto</h2>
-              <p>Detalhes adicionais sobre o projeto...</p>
-              <button className="close-popup" onClick={togglePopup}>Fechar</button>
-            </div>
+        <div className="popup-overlay">
+          <div className="popup">
+            <h2>Informações do Projeto</h2>
+            <p>{popupDescription}</p>
+            <button className="close-popup" onClick={() => setPopupVisible(false)}>Fechar</button>
           </div>
+        </div>
         )}
         <div className="grid--cell">
           <article className="grid--item">
 
             <div className="preview--container ">
-              <a href="#" className="preview-image--container">
+              <a href="https://magoss27.github.io/DeployFlowerExperience/" className="preview-image--container">
                 <div className="preview-imageDois efeito"></div>
               </a>
 
@@ -113,7 +122,7 @@ function Projetos() {
 
             <div className="content--container hiddenCards">
               <div className="title--container">
-                <a className="title--text" href="#">Projeto - Flower Experience</a>
+                <a className="title--text" href="https://magoss27.github.io/DeployFlowerExperience/">Projeto - Flower Experience</a>
               </div>
 
               <div className="tags--overflow-container">
@@ -147,7 +156,7 @@ function Projetos() {
                   <span className="new-tab"><i className="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <button className="follow button" onClick={togglePopup}>
+                <button className="follow button" onClick={() => togglePopup(2)}>
                   <i className="fa-solid fa-circle-info"></i>
                 </button>
 
@@ -162,8 +171,8 @@ function Projetos() {
           <article className="grid--item">
 
             <div className="preview--container">
-              <a href="#" className="preview-image--container">
-                <div className="preview-image"></div>
+              <a href="https://multi-norte.netlify.app" className="preview-image--container">
+                <div className="preview-imagetres efeito"></div>
               </a>
 
 
@@ -171,41 +180,43 @@ function Projetos() {
 
             <div className="content--container hiddenCards">
               <div className="title--container">
-                <a className="title--text" href="#">Projeto 3</a>
+                <a className="title--text" href="https://multi-norte.netlify.app">Catalogo - Walphe</a>
               </div>
 
               <div className="tags--overflow-container">
                 <div className="conteiner-slide">
                   <div className="paginas-slide">
 
-                    <span>React</span>
+                    <span>Produtos</span>
                     <span>HTML</span>
                     <span>CSS</span>
-                    <span>PEROCA</span>
-                    <span>SHOTA</span>
-                    <span>React</span>
+                    <span>Api</span>
+                    <span>Produtos</span>
                     <span>HTML</span>
                     <span>CSS</span>
-                    <span>PEROCA</span>
-                    <span>SHOTA</span>
+                    <span>Api</span>
+                    <span>Produtos</span>
+                    <span>HTML</span>
                   </div>
                 </div>
               </div>
 
               <div className="hover--options">
-                <a href="#" className="Repositório button">
+                <a href="https://github.com/yorkt1/Loja-Test-Walphe" className="Repositório button">
                   <span className="icon-title"><i className="fad fa-books"></i> Repositório</span>
                   <span className="new-tab"><i className="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <a href="#" className="Deploy
+                <a href="https://multi-norte.netlify.app" className="Deploy
          button">
                   <span className="icon-title"><i className="far fa-image"></i> Deploy
                   </span>
                   <span className="new-tab"><i className="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <a href="#" className="follow button"><i className="fa-solid fa-circle-info"></i></a>
+                <button className="follow button" onClick={() => togglePopup(3)}>
+                  <i className="fa-solid fa-circle-info"></i>
+                </button>
               </div>
             </div>
 
@@ -217,8 +228,8 @@ function Projetos() {
           <article className="grid--item">
 
             <div className="preview--container">
-              <a href="#" className="preview-image--container">
-                <div className="preview-image"></div>
+              <a href="https://flowerecommercesa.netlify.app/" className="preview-image--container">
+                <div className="preview-imagequatro efeito"></div>
               </a>
 
 
@@ -226,41 +237,43 @@ function Projetos() {
 
             <div className="content--container hiddenCards">
               <div className="title--container">
-                <a className="title--text" href="#">Projeto 4</a>
+                <a className="title--text" href="https://flowerecommercesa.netlify.app">E-commerce - Flower Experience</a>
               </div>
 
               <div className="tags--overflow-container">
                 <div className="conteiner-slide">
                   <div className="paginas-slide">
 
-                    <span>React</span>
+                    <span>CRUD</span>
                     <span>HTML</span>
                     <span>CSS</span>
-                    <span>PEROCA</span>
-                    <span>SHOTA</span>
-                    <span>React</span>
+                    <span>Figma</span>
+                    <span>Projeto</span>
+                    <span>Crud</span>
+                    <span>LocalStorage</span>
+                    <span>Crud</span>
                     <span>HTML</span>
                     <span>CSS</span>
-                    <span>PEROCA</span>
-                    <span>SHOTA</span>
                   </div>
                 </div>
               </div>
 
               <div className="hover--options">
-                <a href="#" className="Repositório button">
+                <a href="https://github.com/yorkt1/FlowerExperience-E-Commerce" className="Repositório button">
                   <span className="icon-title"><i className="fad fa-books"></i> Repositório</span>
                   <span className="new-tab"><i className="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <a href="#" className="Deploy
+                <a href="https://flowerecommercesa.netlify.app" className="Deploy
          button">
                   <span className="icon-title"><i className="far fa-image"></i> Deploy
                   </span>
                   <span className="new-tab"><i className="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <a href="#" className="follow button"><i className="fa-solid fa-circle-info"></i></a>
+                <button className="follow button" onClick={() => togglePopup(4)}>
+                  <i className="fa-solid fa-circle-info"></i>
+                </button>
               </div>
             </div>
 

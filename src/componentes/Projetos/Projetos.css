@@ -71,15 +71,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #e7e3db; /* Cor de sobreposição */
-    mix-blend-mode: color; /* Aplica a cor sobre a imagem */
+    background-color: #e7e3db; 
+    mix-blend-mode: color; 
     opacity: 1;
     transition: opacity 0.3s ease;
   }
   
-  /* No hover, remove a cor de sobreposição */
+  
   .efeito:hover::before {
-    opacity: 0; /* Remove a sobreposição de cor */
+    opacity: 0;
   }
   
   .efeito:hover {
@@ -94,6 +94,31 @@
     height: 100%;
     background-color: #e7e3db; /* Cor inicial da imagem */
     background-image: url('../Projetos/Flowe.png'); /* Imagem de exemplo */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease, background-color 0.5s ease, filter 0.5s ease;
+    position: relative;
+    transform: scale(1.05);
+  }
+
+
+  .preview-imagetres{
+    width: 100%;
+    height: 100%;
+    background-color: #e7e3db; /* Cor inicial da imagem */
+    background-image: url('../Projetos/WaplheS.png'); /* Imagem de exemplo */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease, background-color 0.5s ease, filter 0.5s ease;
+    position: relative;
+    transform: scale(1.05);
+  }
+
+  .preview-imagequatro{
+    width: 100%;
+    height: 100%;
+    background-color: #e7e3db; /* Cor inicial da imagem */
+    background-image: url('../Projetos/FlowerEcommerce.png'); /* Imagem de exemplo */
     background-size: cover;
     background-position: center;
     transition: transform 0.5s ease, background-color 0.5s ease, filter 0.5s ease;
@@ -182,20 +207,24 @@
   /* Botões */
   .Repositório {
     background-color: #f0f0f0;
-    box-shadow: inset;
+    border: .05rem solid 
+    color-mix(in oklab, currentColor, transparent 80%);
   }
   
   .Deploy
    {
     background-color: #f0f0f0;
-    box-shadow: inset;
+    border: .05rem solid 
+    color-mix(in oklab, currentColor, transparent 80%);
     }
   
   .follow {
     background-color: #f1f1f1;
     border: 2px solid #ddd;
     color: #333;
-    padding: 8px 8px;
+    padding: 8px 8px 8px 4px;
+    border: .05rem solid 
+    color-mix(in oklab, currentColor, transparent 80%);
   }
   
   .follow:hover {
@@ -289,9 +318,6 @@ justify-content: center;
     transform: translateX(-50%); /* Move o conteúdo até a metade do seu tamanho */
   }
 }
-/* 
-popup */
-/* Popup Overlay */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -302,32 +328,76 @@ popup */
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
 }
 
 .popup {
   background-color: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 60px 40px; 
+  border-radius: 12px; 
   width: 400px;
+  max-width: 90%; 
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+  transform: scale(0); 
+  animation: popAnimation 0.3s forwards ease-out;
+  font-family: 'Arial', sans-serif; 
 }
 
 .popup h2 {
   margin-bottom: 20px;
+  font-size: 24px; 
+  font-weight: bold;
+  color: #333; 
+  letter-spacing: 1px; 
+}
+
+.popup p {
+  font-size: 16px; /* Tamanho confortável para leitura */
+  line-height: 1.6; /* Melhorando a legibilidade do texto */
+  color: #555; /* Cor mais suave para o corpo do texto */
+  margin-bottom: 20px; /* Espaçamento entre o texto e o botão */
 }
 
 .popup .close-popup {
-  background-color: #ff5f57;
+  background-color: var(--verde-pastel); /* Cor do botão mais clara */
   color: white;
   border: none;
-  padding: 10px;
+  padding: 12px 24px; /* Mais espaçamento no botão */
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 6px; /* Bordas mais arredondadas */
+  font-size: 16px; /* Aumentando o tamanho da fonte no botão */
+  transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
 }
 
 .popup .close-popup:hover {
-  background-color: #ff1c1c;
+  background-color: var(--verde-pastel); /* Cor mais escura ao passar o mouse */
+}
+
+.popup .close-popup:focus {
+  outline: none; /* Remove o contorno padrão do foco */
+}
+
+/* Animação de "pop" */
+@keyframes popAnimation {
+  0% {
+    transform: scale(0); /* Começa pequeno */
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1); /* Termina no tamanho original */
+    opacity: 1;
+  } 
+}
+
+/* Animação de fade-in para o overlay */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
