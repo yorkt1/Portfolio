@@ -28,10 +28,10 @@ function Sobrenos() {
       <div className="sobremim">
         <div className="DivText hidden"><h1>Sobre mim</h1></div>
         <div className="DivText hidden">
-          Sou um programador apaixonado por tecnologia, inovação e empreendedorismo, com experiência prática em desenvolvimento de sistemas e criação de produtos digitais. Nos últimos anos, venho expandindo meu conhecimento e habilidades, trabalhando em projetos que envolvem tanto o desenvolvimento web quanto mobile. Minha jornada começou com o aprendizado profundo de tecnologias como React, Node.js, React Native, MySQL e Spring Boot, que se tornaram minha especialidade.
+        Sou um programador apaixonado por tecnologia, inovação e empreendedorismo, com experiência prática em desenvolvimento de sistemas e criação de produtos digitais. Nos últimos anos, venho expandindo meu conhecimento e habilidades, trabalhando em projetos que envolvem tanto o desenvolvimento web quanto mobile. Minha jornada começou com o aprendizado profundo de tecnologias como React, Node.js, React Native, MySQL e Spring Boot, que se tornaram minha especialidade.
         </div>
         <div className="DivText hidden">
-          Além de minha paixão por tecnologia e desenvolvimento, sou também um grande amante de games, especialmente de League of Legends. Uma das minhas inspirações para o design do meu portfólio foi na paleta de cores do Yasuo, e mais especificamente a sua "Florecer Espiritual". A paleta de cores do Yasuo, com seus tons profundos e equilibrados, influenciou diretamente a escolha das cores do meu site, trazendo uma estética que mistura tranquilidade e poder — algo que acredito refletir na forma como trabalho: focado, criativo e sempre em busca do meu melhor.
+        Tenho uma abordagem focada na entrega de soluções eficazes e inovadoras, sempre buscando otimizar processos e melhorar a experiência do usuário. Além disso, tenho experiência na implementação de boas práticas de desenvolvimento, como testes automatizados, integração contínua e design de arquitetura escalável, sempre visando a eficiência e a qualidade no desenvolvimento de sistemas.
         </div>
       </div>
     </div>

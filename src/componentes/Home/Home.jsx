@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './Home.css'; // Supondo que o CSS seja colocado em um arquivo separado.
+import CV from '../Home/Guilherme-cv.pdf'
 
 const Home = () => {
   useEffect(() => {
@@ -26,35 +27,32 @@ const Home = () => {
             Desenvolvedor de sistemas
             <a target="_blank" href="#">Web Developer</a>
           </span>
-        </div>
 
+        </div>
         <ul className="social-icons hiddenSocial">
           <li>
-            <a href="#">
-              <i className="fab fa-facebook-f social-icon"></i>    
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fab fa-twitter social-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/guilherme-rocha-oliveira-3942481a2/">
               <i className="fab fa-linkedin-in social-icon"></i>
             </a>
           </li>
           <li>
-            <a href="#">
-              <i className="fab fa-google-plus-g social-icon"></i>
+            <a href="https://github.com/yorkt1">
+              <i className="fa-brands fa-github social-icon"></i>
             </a>
           </li>
+          <li>
+            <a href="https://www.instagram.com/guiyorkt/">
+              <i className="fa-brands fa-instagram social-icon"></i>
+            </a>
+          </li>
+        
+
+          <a href={CV} download>
+            <button className="botao-transparente"><i className="fa-solid fa-download"></i>  Baixar Currículo</button>
+          </a>
         </ul>
 
-        {/* Botão para baixar o currículo */}
-        <a href="/path/to/curriculo.pdf" download className="download-btn">
-          Baixar Currículo
-        </a>
+
       </section>
     </div>
   );
