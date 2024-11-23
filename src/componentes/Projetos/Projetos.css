@@ -64,7 +64,7 @@
   }
   
   /* Efeito de hover */
-  .preview-imageProjetoUm::before {
+  .efeito::before {
     content: "";
     position: absolute;
     top: 0;
@@ -78,12 +78,27 @@
   }
   
   /* No hover, remove a cor de sobreposição */
-  .preview-imageProjetoUm:hover::before {
+  .efeito:hover::before {
     opacity: 0; /* Remove a sobreposição de cor */
   }
   
-  .preview-imageProjetoUm:hover {
+  .efeito:hover {
     transform: scale(1.00);
+  }
+
+
+
+
+  .preview-imageDois{
+    width: 100%;
+    height: 100%;
+    background-color: #e7e3db; /* Cor inicial da imagem */
+    background-image: url('../Projetos/Flowe.png'); /* Imagem de exemplo */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease, background-color 0.5s ease, filter 0.5s ease;
+    position: relative;
+    transform: scale(1.05);
   }
   /* Meta Container */
   .meta--container {
@@ -109,7 +124,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 230px;
+    height: 190px;
   }
   
   /* Título */
@@ -257,6 +272,7 @@
       overflow: hidden;
       white-space: nowrap;
       margin-left: 5px;
+      color: #1b1b1b;
         }
 
 .tituProjetos{
@@ -273,8 +289,46 @@ justify-content: center;
     transform: translateX(-50%); /* Move o conteúdo até a metade do seu tamanho */
   }
 }
+/* 
+popup */
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.popup h2 {
+  margin-bottom: 20px;
+}
+
+.popup .close-popup {
+  background-color: #ff5f57;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.popup .close-popup:hover {
+  background-color: #ff1c1c;
+}
 
 
   /* Responsividade */
