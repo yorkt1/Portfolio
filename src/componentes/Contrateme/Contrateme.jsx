@@ -27,12 +27,18 @@ const Contrateme = () => {
     emailjs.send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         console.log('Email enviado com sucesso!', response);
+        // Exibe o alerta de sucesso
+        alert('Mensagem enviada com sucesso!');
+        
+        // Limpar os campos do formulário após o envio
         setName('');
         setEmail('');
         setMessage('');
       })
       .catch((error) => {
         console.error('Erro ao enviar o email:', error);
+        // Exibe um alerta caso haja erro
+        alert('Erro ao enviar a mensagem. Tente novamente!');
       });
   };
 
